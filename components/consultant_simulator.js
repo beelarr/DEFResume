@@ -1,7 +1,7 @@
 import React from "react";
 import {AppRegistry, asset, StyleSheet, Pano, Text, View, Video, Image} from "react-vr";
 
-export default class RealSimpleEmail extends React.Component {
+export default class Consultant_Simulator extends React.Component {
   constructor() {
     super();
     this.state = {gazeEnabled: false}
@@ -21,19 +21,19 @@ export default class RealSimpleEmail extends React.Component {
         >
 
           <Text style={{
-            width: 6,
+            width: 6.5,
             backgroundColor: this.state.gazeEnabled ? '#5FAFDF' : '#082B40',
             color: '#FCFCFC',
             fontSize: 0.5,
             textAlign: 'center',
             textAlignVertical: 'center',
-          }}>Real Simple Email
+          }}>Consultant Simulator
           </Text>
 
 
           {this.state.gazeEnabled ?
               <View style={{flex: 1, flexDirection: 'row'}}>
-                <RSE_Video/>
+                <Consultant_Video/>
                 <FeatureList/>
               </View>
               : null}
@@ -44,13 +44,13 @@ export default class RealSimpleEmail extends React.Component {
   }
 }
 
-class RSE_Video extends React.Component {
+class Consultant_Video extends React.Component {
   render() {
     return (
         <View style={{flex: 1, flexDirection: 'column'}}>
           <Video style={{
-            width: 3.5, height: 2.0,
-          }} source={asset('rse_pitch.webm')}
+            width: 4, height: 2.0,
+          }} source={asset('consultant.webm')}
           />
         </View>
     )
@@ -64,15 +64,15 @@ class FeatureList extends React.Component {
           flex: 1,
           flexDirection: 'column',
           backgroundColor: '#082B40',
+          width: 2,
+          justifyContent: 'center',
+          //itemAlign: 'center'
         }}
         >
-          <ListElement text="2.6 Billion emails processed"/>
-          <ListElement text="13,000+ email templates generated"/>
-          <ListElement text="Advanced campaign tracking"/>
-          <ListElement text="Beautiful reports with Chart.js"/>
-          <ListElement text="User-friendly mass segment scheduling"/>
-          <ListElement text="Sold to the Tea Party"/>
-          <ListElement text="PHP | JavaScript | MySQL"/>
+          <ListElement text="Platform Game"/>
+          <ListElement text="ES6 JavaScript"/>
+          <ListElement text="React"/>
+          <ListElement text="Phaser.io"/>
         </View>
     )
   }

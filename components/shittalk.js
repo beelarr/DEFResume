@@ -1,7 +1,7 @@
 import React from "react";
 import {AppRegistry, asset, StyleSheet, Pano, Text, View, Video, Image} from "react-vr";
 
-export default class RealSimpleEmail extends React.Component {
+export default class Shittalk extends React.Component {
   constructor() {
     super();
     this.state = {gazeEnabled: false}
@@ -27,14 +27,22 @@ export default class RealSimpleEmail extends React.Component {
             fontSize: 0.5,
             textAlign: 'center',
             textAlignVertical: 'center',
-          }}>Real Simple Email
+          }}>Shittalk Generator
           </Text>
 
 
           {this.state.gazeEnabled ?
               <View style={{flex: 1, flexDirection: 'row'}}>
-                <RSE_Video/>
+                <ImageCol img={'shittalk_1.jpg'}/>
                 <FeatureList/>
+              </View>
+              : null}
+
+          {this.state.gazeEnabled ?
+              <View style={{flex: 1, flexDirection: 'row'}}>
+                <ImageCol img={'shittalk_3.png'}/>
+                <ImageCol img={'shittalk_2.png'}/>
+                <ImageCol img={'shittalk_4.png'}/>
               </View>
               : null}
 
@@ -44,13 +52,18 @@ export default class RealSimpleEmail extends React.Component {
   }
 }
 
-class RSE_Video extends React.Component {
+class ImageCol extends React.Component {
+  static propTypes = {
+    img: React.PropTypes.string.isRequired,
+  };
+
   render() {
+    const img = this.props.img;
     return (
         <View style={{flex: 1, flexDirection: 'column'}}>
-          <Video style={{
-            width: 3.5, height: 2.0,
-          }} source={asset('rse_pitch.webm')}
+          <Image style={{
+            width: 3.0, height: 2.0,
+          }} source={asset(img)}
           />
         </View>
     )
@@ -66,13 +79,11 @@ class FeatureList extends React.Component {
           backgroundColor: '#082B40',
         }}
         >
-          <ListElement text="2.6 Billion emails processed"/>
-          <ListElement text="13,000+ email templates generated"/>
-          <ListElement text="Advanced campaign tracking"/>
-          <ListElement text="Beautiful reports with Chart.js"/>
-          <ListElement text="User-friendly mass segment scheduling"/>
-          <ListElement text="Sold to the Tea Party"/>
-          <ListElement text="PHP | JavaScript | MySQL"/>
+          <ListElement text="540,000+ votes"/>
+          <ListElement text="9,500+ submissions"/>
+          <ListElement text="300,000+ visitors"/>
+          <ListElement text="Community-moderated insult repository"/>
+          <ListElement text="JavaScript | PHP | MySQL | .CFG"/>
         </View>
     )
   }
