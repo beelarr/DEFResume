@@ -26,13 +26,13 @@ export default class Hoop extends React.Component {
 
           {this.state.gazeEnabled ?
               <View style={{flex: 1, flexDirection: 'row'}}>
-                <Hoop_Video/>
                 <FeatureList features={[
                   "Arduino powered",
                   "20+ light patterns",
                   "1.5 hour battery life",
-                  "C | C++"
+                  "C | C++",
                 ]}/>
+                <Hoop_Video/>
               </View>
               : null}
 

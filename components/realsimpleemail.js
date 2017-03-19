@@ -33,7 +33,7 @@ export default class RealSimpleEmail extends React.Component {
                   "13,000+ email templates generated",
                   "Advanced campaign tracking",
                   "Beautiful reports with Chart.js",
-                  "User-friendly mass segment scheduling",
+                  "User-friendly bulk scheduling",
                   "Sold to the Tea Party",
                   "PHP | JavaScript | MySQL",
                 ]}/>

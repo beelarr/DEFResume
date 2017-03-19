@@ -12,13 +12,17 @@ class DEFResume extends React.Component {
     return (
         <View>
           <Pano source={asset('bg/desert3_sm.jpg')}/>
-          <View style={{flex: 1, flexDirection: 'row', layoutOrigin: [0.5, 0.5],}}>
-            <Consultant_Simulator/>
-            <Cellcion/>
-            <Hoop/>
-            <Arborist/>
-            <Shittalk/>
-            <RealSimpleEmail/>
+          <View style={{layoutOrigin: [0.5, 0.5],}}>
+            <View style={{flex: 1, flexDirection: 'row',}}>
+              <Cellcion/>
+              <RealSimpleEmail/>
+              <Arborist/>
+
+              <Shittalk/>
+              <Consultant_Simulator/>
+              <Hoop/>
+
+            </View>
           </View>
         </View>
     );
