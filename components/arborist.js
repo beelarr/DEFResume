@@ -3,7 +3,7 @@ import {AppRegistry, asset, StyleSheet, Pano, Text, View, Video, Image} from "re
 import FeatureList from "../ui/FeatureList";
 import Header from "../ui/Header";
 
-export default class RealSimpleEmail extends React.Component {
+export default class Arborist extends React.Component {
   constructor() {
     super();
     this.state = {gazeEnabled: false}
@@ -22,20 +22,18 @@ export default class RealSimpleEmail extends React.Component {
               onExit={() => this.setState({gazeEnabled: false})}
         >
 
-          <Header text="Real Simple Email" gazeEnabled={this.state.gazeEnabled}/>
-
+          <Header text="Bonsai Arborist" gazeEnabled={this.state.gazeEnabled}/>
 
           {this.state.gazeEnabled ?
               <View style={{flex: 1, flexDirection: 'row'}}>
-                <RSE_Video/>
+                <Arborist_Video/>
                 <FeatureList features={[
-                  "2.6 Billion emails processed",
-                  "13,000+ email templates generated",
-                  "Advanced campaign tracking",
-                  "Beautiful reports with Chart.js",
-                  "User-friendly mass segment scheduling",
-                  "Sold to the Tea Party",
-                  "PHP | JavaScript | MySQL",
+                  "Client: Bonsai Electronics",
+                  "Part of $15,000 package",
+                  "File-sorting for 360° films",
+                  "Streamlines editing workflow",
+                  "For 4+ cameras",
+                  "Node.js | React | Electron",
                 ]}/>
               </View>
               : null}
@@ -46,15 +44,17 @@ export default class RealSimpleEmail extends React.Component {
   }
 }
 
-class RSE_Video extends React.Component {
+class Arborist_Video extends React.Component {
   render() {
     return (
         <View style={{flex: 1, flexDirection: 'column'}}>
           <Video style={{
             width: 3.5, height: 2.0,
-          }} source={asset('vids/rse_pitch.webm')}
+          }} source={asset('vids/arborist.webm')}
           />
         </View>
     )
   }
 }
+
+

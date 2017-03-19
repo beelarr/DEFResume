@@ -1,5 +1,7 @@
 import React from "react";
 import {AppRegistry, asset, StyleSheet, Pano, Text, View, Video, Image} from "react-vr";
+import FeatureList from "../ui/FeatureList";
+import Header from "../ui/Header";
 
 export default class Consultant_Simulator extends React.Component {
   constructor() {
@@ -20,21 +22,19 @@ export default class Consultant_Simulator extends React.Component {
               onExit={() => this.setState({gazeEnabled: false})}
         >
 
-          <Text style={{
-            width: 6.5,
-            backgroundColor: this.state.gazeEnabled ? '#5FAFDF' : '#082B40',
-            color: '#FCFCFC',
-            fontSize: 0.5,
-            textAlign: 'center',
-            textAlignVertical: 'center',
-          }}>Consultant Simulator
-          </Text>
+          <Header text="Consultant Simulator" gazeEnabled={this.state.gazeEnabled}/>
 
 
           {this.state.gazeEnabled ?
               <View style={{flex: 1, flexDirection: 'row'}}>
                 <Consultant_Video/>
-                <FeatureList/>
+                <FeatureList features={[
+                  'Platform Game',
+                  'Phaser.io Framework',
+                  'ES6 JavaScript',
+                  'React',
+                  'Personal Best Timer'
+                ]}/>
               </View>
               : null}
 
@@ -50,49 +50,9 @@ class Consultant_Video extends React.Component {
         <View style={{flex: 1, flexDirection: 'column'}}>
           <Video style={{
             width: 4, height: 2.0,
-          }} source={asset('consultant.webm')}
+          }} source={asset('vids/consultant.webm')}
           />
         </View>
-    )
-  }
-}
-
-class FeatureList extends React.Component {
-  render() {
-    return (
-        <View style={{
-          flex: 1,
-          flexDirection: 'column',
-          backgroundColor: '#082B40',
-          width: 2,
-          justifyContent: 'center',
-          //itemAlign: 'center'
-        }}
-        >
-          <ListElement text="Platform Game"/>
-          <ListElement text="ES6 JavaScript"/>
-          <ListElement text="React"/>
-          <ListElement text="Phaser.io"/>
-        </View>
-    )
-  }
-}
-
-class ListElement extends React.Component {
-  static propTypes = {
-    text: React.PropTypes.string.isRequired,
-  };
-
-  render() {
-    return (
-        <Text style={{
-          fontSize: 0.22,
-          textAlign: 'left',
-          textAlignVertical: 'center',
-          color: '#fefefe',
-          marginLeft: 0.2
-        }}>» {this.props.text}&nbsp;
-        </Text>
     )
   }
 }
