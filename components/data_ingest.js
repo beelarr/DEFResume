@@ -16,7 +16,7 @@ export default class Data_Ingest extends React.Component {
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
-          transform: [{translate: [1, 0, -2.6]}, {rotateY:40}],
+          transform: [{rotateY: 35}, {translate: [1.3, 0, -2.6]},],
         }}
               onEnter={() => this.setState({gazeEnabled: true})}
               onExit={() => this.setState({gazeEnabled: false})}

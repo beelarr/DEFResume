@@ -16,7 +16,7 @@ export default class Shittalk extends React.Component {
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
-          transform: [{translate: [0, 0, -4]}],
+          transform: [{rotateY: -40}, {translate: [-1, 0, -1]},],
         }}
               onEnter={() => this.setState({gazeEnabled: true})}
               onExit={() => this.setState({gazeEnabled: false})}

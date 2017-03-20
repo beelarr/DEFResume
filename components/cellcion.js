@@ -16,7 +16,7 @@ export default class Cellcion extends React.Component {
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
-          transform: [{translate: [0, 0, -4]}],
+          transform: [{rotateY: 35}, {translate: [1.3, 0, -1.7]},],
         }}
               onEnter={() => this.setState({gazeEnabled: true})}
               onExit={() => this.setState({gazeEnabled: false})}
