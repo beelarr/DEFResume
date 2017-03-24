@@ -16,7 +16,6 @@ export default class Arborist extends React.Component {
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
-          transform: [{rotateY: -43}, {translate: [-1.5, 0, -1]},],
         }}
               onEnter={() => this.setState({gazeEnabled: true})}
               onExit={() => this.setState({gazeEnabled: false})}
@@ -24,19 +23,17 @@ export default class Arborist extends React.Component {
 
           <Header text="Bonsai Arborist" gazeEnabled={this.state.gazeEnabled}/>
 
-          {this.state.gazeEnabled ?
-              <View style={{flex: 1, flexDirection: 'row'}}>
-                <Arborist_Video/>
-                <FeatureList features={[
-                  "Client: Bonsai Electronics",
-                  "Part of $15,000 package",
-                  "File-sorting for 360° films",
-                  "Streamlines editing workflow",
-                  "For 4+ cameras",
-                  "Node.js | React | Electron",
-                ]}/>
-              </View>
-              : null}
+          <View style={{flex: 1, flexDirection: 'row'}}>
+            <Arborist_Video/>
+            <FeatureList features={[
+              "Client: Bonsai Electronics",
+              "Part of $15,000 package",
+              "File-sorting for 360° films",
+              "Streamlines editing workflow",
+              "For 4+ cameras",
+              "Node.js | React | Electron",
+            ]}/>
+          </View>
 
 
         </View>

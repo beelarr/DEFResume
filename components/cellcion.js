@@ -16,7 +16,6 @@ export default class Cellcion extends React.Component {
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
-          transform: [{rotateY: 35}, {translate: [1.3, 0, -1.7]},],
         }}
               onEnter={() => this.setState({gazeEnabled: true})}
               onExit={() => this.setState({gazeEnabled: false})}
@@ -24,17 +23,15 @@ export default class Cellcion extends React.Component {
 
           <Header text="Cellcion" gazeEnabled={this.state.gazeEnabled}/>
 
-          {this.state.gazeEnabled ?
-              <View style={{flex: 1, flexDirection: 'row'}}>
-                <ImageCol/>
-                <FeatureList features={[
-                  "Client: Cellcion, LLC",
-                  "Automated flow cytometry",
-                  "Wide range of workflows",
-                  "R | Shiny | Bootstrap",
-                ]}/>
-              </View>
-              : null}
+          <View style={{flex: 1, flexDirection: 'row'}}>
+            <Cellcion_ImageCol/>
+            <FeatureList features={[
+              "Client: Cellcion, LLC",
+              "Automated flow cytometry",
+              "Wide range of workflows",
+              "R | Shiny | Bootstrap",
+            ]}/>
+          </View>
 
 
         </View>
@@ -42,7 +39,7 @@ export default class Cellcion extends React.Component {
   }
 }
 
-class ImageCol extends React.Component {
+class Cellcion_ImageCol extends React.Component {
   render() {
     return (
         <View style={{flex: 1, flexDirection: 'column'}}>

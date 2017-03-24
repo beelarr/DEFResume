@@ -16,36 +16,29 @@ export default class Shittalk extends React.Component {
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
-          transform: [{rotateY: -40}, {translate: [-1, 0, -1]},],
         }}
-              onEnter={() => this.setState({gazeEnabled: true})}
-              onExit={() => this.setState({gazeEnabled: false})}
         >
 
           <Header text="Shittalk Generator" gazeEnabled={this.state.gazeEnabled}/>
 
 
-          {this.state.gazeEnabled ?
-              <View style={{flex: 1, flexDirection: 'row'}}>
-                <ImageCol img={'shittalk_kotaku1.jpg'}/>
-                <FeatureList features={[
-                  "540,000+ votes",
-                  "9,500+ submissions",
-                  "300,000+ visitors",
-                  "Community-moderated insult repository",
-                  "JavaScript | PHP | MySQL | .CFG",
-                ]}/>
-                <ImageCol img={'shittalk_kotaku2.jpg'}/>
-              </View>
-              : null}
+          <View style={{flex: 1, flexDirection: 'row'}}>
+            <ImageCol img={'shittalk_kotaku1.jpg'}/>
+            <FeatureList features={[
+              "540,000+ votes",
+              "9,500+ submissions",
+              "300,000+ visitors",
+              "Community-moderated insult repository",
+              "JavaScript | PHP | MySQL | .CFG",
+            ]}/>
+            <ImageCol img={'shittalk_kotaku2.jpg'}/>
+          </View>
 
-          {this.state.gazeEnabled ?
-              <View style={{flex: 1, flexDirection: 'row'}}>
-                <ImageCol img={'shittalk_de.jpg'}/>
-                <ImageCol img='shittalk_br.jpg'/>
-                <ImageCol img={'shittalk_ru.jpg'}/>
-              </View>
-              : null}
+          <View style={{flex: 1, flexDirection: 'row'}}>
+            <ImageCol img={'shittalk_de.jpg'}/>
+            <ImageCol img='shittalk_br.jpg'/>
+            <ImageCol img={'shittalk_ru.jpg'}/>
+          </View>
 
 
         </View>

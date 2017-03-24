@@ -16,7 +16,6 @@ export default class Data_Analytics extends React.Component {
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
-          transform: [{rotateY: -35}, {translate: [-1, 0, -2.6]},],
         }}
               onEnter={() => this.setState({gazeEnabled: true})}
               onExit={() => this.setState({gazeEnabled: false})}
@@ -24,19 +23,16 @@ export default class Data_Analytics extends React.Component {
 
           <Header text="DataHub - Analytics" gazeEnabled={this.state.gazeEnabled}/>
 
-          {this.state.gazeEnabled ?
-              <View style={{flex: 1, flexDirection: 'row'}}>
-                <FeatureList features={[
-                  "Booz Allen Hamilton",
-                  "CMS TCPI Project",
-                  "10,000+ Lines of Code",
-                  "Analyzes nationwide clinician data",
-                  "Generates automated actionable reports   ",
-                  "Python | Postgres | Pandas | AWS  ",
-                ]}/>
-              </View>
-              : null}
-
+          <View style={{flex: 1, flexDirection: 'row'}}>
+            <FeatureList features={[
+              "Booz Allen Hamilton",
+              "CMS TCPI Project",
+              "10,000+ Lines of Code",
+              "Analyzes nationwide clinician data",
+              "Generates automated actionable reports   ",
+              "Python | Postgres | Pandas | AWS  ",
+            ]}/>
+          </View>
 
         </View>
     );

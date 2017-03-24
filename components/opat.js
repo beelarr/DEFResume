@@ -16,7 +16,6 @@ export default class OPAT extends React.Component {
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
-          transform: [{translate: [0, 0, -4]}],
         }}
               onEnter={() => this.setState({gazeEnabled: true})}
               onExit={() => this.setState({gazeEnabled: false})}
@@ -24,20 +23,17 @@ export default class OPAT extends React.Component {
 
           <Header text="OPAT" gazeEnabled={this.state.gazeEnabled}/>
 
-          {this.state.gazeEnabled ?
-              <View style={{flex: 1, flexDirection: 'row'}}>
-                <ImageCol img={'opat2.jpg'}/>
-                <FeatureList features={[
-                  "Booz Allen Hamilton",
-                  "CMS TCPI Project",
-                  "Replaced Excel templates",
-                  "Distributed across USA",
-                  "Used by hundreds of clinicians",
-                  "JavaScript | React | Electron ",
-                ]}/>
-              </View>
-              : null}
-
+          <View style={{flex: 1, flexDirection: 'row'}}>
+            <ImageCol img={'opat2.jpg'}/>
+            <FeatureList features={[
+              "Booz Allen Hamilton",
+              "CMS TCPI Project",
+              "Replaced Excel templates",
+              "Distributed across USA",
+              "Used by hundreds of clinicians",
+              "JavaScript | React | Electron ",
+            ]}/>
+          </View>
 
         </View>
     );

@@ -16,7 +16,6 @@ export default class RealSimpleEmail extends React.Component {
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
-          transform: [{translate: [0, 0, -4]}],
         }}
               onEnter={() => this.setState({gazeEnabled: true})}
               onExit={() => this.setState({gazeEnabled: false})}
@@ -25,20 +24,18 @@ export default class RealSimpleEmail extends React.Component {
           <Header text="Real Simple Email" gazeEnabled={this.state.gazeEnabled}/>
 
 
-          {this.state.gazeEnabled ?
-              <View style={{flex: 1, flexDirection: 'row'}}>
-                <RSE_Video/>
-                <FeatureList features={[
-                  "2.6 Billion emails processed",
-                  "13,000+ email templates generated",
-                  "Advanced campaign tracking",
-                  "Beautiful reports with Chart.js",
-                  "User-friendly bulk scheduling",
-                  "Sold to the Tea Party",
-                  "PHP | JavaScript | MySQL",
-                ]}/>
-              </View>
-              : null}
+          <View style={{flex: 1, flexDirection: 'row'}}>
+            <RSE_Video/>
+            <FeatureList features={[
+              "2.6 Billion emails processed",
+              "13,000+ email templates generated",
+              "Advanced campaign tracking",
+              "Beautiful reports with Chart.js",
+              "User-friendly bulk scheduling",
+              "Sold to the Tea Party",
+              "PHP | JavaScript | MySQL",
+            ]}/>
+          </View>
 
 
         </View>

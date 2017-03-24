@@ -4,14 +4,16 @@
     <style>body { margin: 0; }</style>
   <head>
   <body>
+    <script src="./client.bundle?platform=vr"></script>
     <!-- When you're ready to deploy your app, update this line to point to your compiled client.bundle.js -->
-    <script src="./build/client.bundle.js?ver=3"></script>
+    <!--<script src="./build/client.bundle.js?ver=3"></script>-->
     <script>
       // Initialize the React VR application
       ReactVR.init(
+        '../index.vr.bundle?platform=vr&dev=true',
         // When you're ready to deploy your app, update this line to point to
         // your compiled index.bundle.js
-        './build/index.bundle.js?ver=3',
+        // './build/index.bundle.js?ver=3',
         // Attach it to the body tag
         document.body
       );

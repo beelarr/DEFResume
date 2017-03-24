@@ -16,7 +16,6 @@ export default class Consultant_Simulator extends React.Component {
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
-          transform: [{rotateY: 35}, {translate: [1.3, 0, -1.7]},],
         }}
               onEnter={() => this.setState({gazeEnabled: true})}
               onExit={() => this.setState({gazeEnabled: false})}
@@ -24,20 +23,16 @@ export default class Consultant_Simulator extends React.Component {
 
           <Header text="Consultant Simulator" gazeEnabled={this.state.gazeEnabled}/>
 
-
-          {this.state.gazeEnabled ?
-              <View style={{flex: 1, flexDirection: 'row'}}>
-                <Consultant_Video/>
-                <FeatureList features={[
-                  'Platform Game',
-                  'Phaser.io Framework',
-                  'ES6 JavaScript',
-                  'React',
-                  'Personal Best Timer'
-                ]}/>
-              </View>
-              : null}
-
+          <View style={{flex: 1, flexDirection: 'row'}}>
+            <Consultant_Video/>
+            <FeatureList features={[
+              'Platform Game',
+              'Phaser.io Framework',
+              'ES6 JavaScript',
+              'React',
+              'Personal Best Timer'
+            ]}/>
+          </View>
 
         </View>
     );

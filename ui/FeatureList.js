@@ -12,12 +12,14 @@ export default class FeatureList extends React.Component {
         <View style={{
           flex: 1,
           flexDirection: 'column',
+          width: 4,
+          height: 2,
           backgroundColor: '#082B40',
           justifyContent: 'center',
         }}
         >
           {this.props.features.map((txt) => {
-            return <ListElement text={txt}/>
+            return <ListElement text={txt} key={txt}/>
           })}
         </View>
     )

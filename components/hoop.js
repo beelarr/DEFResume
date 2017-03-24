@@ -16,7 +16,6 @@ export default class Hoop extends React.Component {
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
-          transform: [{translate: [0, 0, -4]}],
         }}
               onEnter={() => this.setState({gazeEnabled: true})}
               onExit={() => this.setState({gazeEnabled: false})}
@@ -24,18 +23,15 @@ export default class Hoop extends React.Component {
 
           <Header text="LED Hula Hoop" gazeEnabled={this.state.gazeEnabled}/>
 
-          {this.state.gazeEnabled ?
-              <View style={{flex: 1, flexDirection: 'row'}}>
-                <FeatureList features={[
-                  "Arduino powered",
-                  "20+ light patterns",
-                  "1.5 hour battery life",
-                  "C | C++",
-                ]}/>
-                <Hoop_Video/>
-              </View>
-              : null}
-
+          <View style={{flex: 1, flexDirection: 'row'}}>
+            <FeatureList features={[
+              "Arduino powered",
+              "20+ light patterns",
+              "1.5 hour battery life",
+              "C | C++",
+            ]}/>
+            <Hoop_Video/>
+          </View>
 
         </View>
     );
